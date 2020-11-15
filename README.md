@@ -23,6 +23,5 @@ i tried to seperate the concerns by creting custom services depend on each other
     - only allowed sort keys are "cost" and "created_at", if you passed diffrent key the app will use cost by default, for example if you passed "sort=name,asc" the app will treat it as "sort=cost,asc" because "name" not available for sorting as you required in the task.
     so try to imitate the exmample we mentioned earlier;
 
-## End
-### Please feel to contact me regards any clarification
-### Thanks in advance
+#### Please feel free to contact me regards any clarification
+#### Thanks in advance
