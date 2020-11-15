@@ -6,14 +6,14 @@
 - configure the database in ".env" file.
 - run "php artisan serve" in the project root.
 ##  overview about What i did so far.
-- this app depends on 1 controller (ExpensesController), and two custom services on of them responsible for building the main sql (search query (VehicleExpensesSearcher) <br> and the other service responsible for building the sql filteration (VehicleExpensesFilter) <br> 
+- this app depends on 1 controller (ExpensesController) to validate and map the user inputs to the services, and two custom services on of them responsible for building the main sql (search query (VehicleExpensesSearcher) <br> and the other service responsible for building the sql filteration (VehicleExpensesFilter) <br> 
 and tests file (VehicleExpensesSearcherTest). <br>
 - i tried to seperate the concerns by creting custom services depend on each other, to make the modifications and reusability easier in case if you want to add more features.
 ##  How to expose the Endpoint?
 - http://baseurl/api/v1/cars/expenses
 ##  How to make a search, filter, and sorting?
 ### Full filteration example
-- http://baseurl/api/v1/cars/expenses?page=1&type=fuel&vehicle_name=don&cost_min=1&cost_max=100&date_min=2019-1-1&date_max=2020-1-1&sort=cost,asc
+- http://baseurl/api/v1/cars/expenses?page=1&type=fuel,service,insurance&vehicle_name=don&cost_min=1&cost_max=100&date_min=2019-1-1&date_max=2020-1-1&sort=cost,asc
 ## Important consedirations
 - i am using "paging and limitation" for the data reponse to increase perforanmce and reduce response time.
 - for example if the returned data is "900" record i split it to 3 parts corresponding to 3 pages each page hold 300 so if you want to get the first "300" records you pass "page=1" and if you want to get the second "300" records you pass "page=2" and so on.
