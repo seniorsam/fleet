@@ -6,9 +6,9 @@
 - configure the database in ".env" file.
 - run "php artisan serve" in the project root.
 ##  overview about What i did so far.
-this app depends on 1 controller (ExpensesController), and two custom services on of them responsible for building the main sql (search query (VehicleExpensesSearcher) <br> and the other service responsible for building the sql filteration (VehicleExpensesFilter) <br> 
+- this app depends on 1 controller (ExpensesController), and two custom services on of them responsible for building the main sql (search query (VehicleExpensesSearcher) <br> and the other service responsible for building the sql filteration (VehicleExpensesFilter) <br> 
 and tests file (VehicleExpensesSearcherTest). <br>
-i tried to seperate the concerns by creting custom services depend on each other to make the modifications easier in case if you want to add more features.
+- i tried to seperate the concerns by creting custom services depend on each other, to make the modifications and reusability easier in case if you want to add more features.
 ##  How to expose the Endpoint?
 - http://baseurl/api/v1/cars/expenses
 ##  How to make a search, filter, and sorting?

@@ -13,7 +13,7 @@ class ExpensesController extends Controller
     function main(Request $request){
         
         # validation rules
-        $rules=array(
+        $rules=array(   
             'cost_min' => 'int',
             'cost_max' => 'int'
         );
